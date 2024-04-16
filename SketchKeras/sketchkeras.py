@@ -27,10 +27,10 @@ def preprocess(img):
     h, w, c = img.shape
     blurred = cv2.GaussianBlur(img, (0, 0), 3)
     highpass = img.astype(int) - blurred.astype(int)
-    highpass = highpass.astype(np.float) / 128.0
+    highpass = highpass.astype(float) / 128.0
     highpass /= np.max(highpass)
 
-    ret = np.zeros((512, 512, 3), dtype=np.float)
+    ret = np.zeros((512, 512, 3), dtype=float)
     ret[0:h,0:w,0:c] = highpass
     return ret
 
