@@ -1,0 +1,10 @@
+dropout: 0.2
+embed_dim: 256
+hidden_dim: 512
+lr: 0.001
+num_channels: 1
+num_classes: 108
+num_heads: 8
+num_layers: 6
+num_patches: 64
+patch_size: 8
